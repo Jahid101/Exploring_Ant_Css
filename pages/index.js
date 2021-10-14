@@ -23,6 +23,7 @@ import {
   PlayCircleFilled
 } from '@ant-design/icons';
 import { Layout, Menu, Breadcrumb } from 'antd';
+import Slider from '@ant-design/react-slick';
 
 const { Header, Content, Footer } = Layout;
 
@@ -31,7 +32,7 @@ const { Header, Content, Footer } = Layout;
 
 export default function Home() {
 
-
+  const [size, setSize] = useState(8);
 
   return (
     <div className="">
@@ -153,7 +154,7 @@ export default function Home() {
               <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
                 {new Array(15).fill(null).map((_, index) => {
                   const key = index + 1;
-                  const sense = ["", "Asim", "Bivor", "Tahnaz", "Shohel", "Symon", "Jahid noob","Asim", "Bivor", "Tahnaz", "Shohel", "Symon", "Jahid noob"]
+                  const sense = ["", "Asim", "Bivor", "Tahnaz", "Shohel", "Symon", "Jahid noob", "Asim", "Bivor", "Tahnaz", "Shohel", "Symon", "Jahid noob"]
                   return <Menu.Item key={key}>{sense[key]}</Menu.Item>;
                 })}
               </Menu>
@@ -166,10 +167,22 @@ export default function Home() {
               </Breadcrumb>
               <div className="site-layout-content">Content</div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2021 Created by Jahid noob</Footer>
+            <Footer style={{ textAlign: 'center' }}>Ant Design ©2021 Created by Jahid oob</Footer>
           </Layout>
         </div>
 
+
+        <div>
+          <Slider value={size} onChange={value => setSize(value)} />
+          <br />
+          <br />
+          <Space size={size}>
+            <Button type="primary">Primary</Button>
+            <Button>Default</Button>
+            <Button type="dashed">Dashed</Button>
+            <Button type="link">Link</Button>
+          </Space>
+        </div>
 
       </>
     </div>
