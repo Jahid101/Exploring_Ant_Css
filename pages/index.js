@@ -1,7 +1,7 @@
 import 'antd/dist/antd.css';
 import Index from './Components/AntCss/index';
 import AntCss from './Components/AntCss/index'
-import { Button, Space, Tooltip } from 'antd';
+import { Button, Col, Divider, Row, Space, Tooltip } from 'antd';
 import React, { useState } from 'react';
 import { PoweroffOutlined } from '@ant-design/icons';
 import { SearchOutlined } from '@ant-design/icons';
@@ -29,7 +29,7 @@ import {
 export default function Home() {
 
 
-  
+
   return (
     <div className="">
       <h1 className="">Exploring Ant Css</h1>
@@ -104,6 +104,44 @@ export default function Home() {
           <Title level={4}>h4. Ant Design</Title>
           {/* <Title level={5}>h5. Ant Design</Title> */}
         </div>
+
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
+            probare, quae sunt a te dicta? Refert tamen, quo modo.
+          </p>
+          <Divider plain>Text</Divider>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+          <Divider orientation="left">Left Text</Divider>
+          <p>
+            Lorem ipsum dolor sit amet
+          </p>
+          <Divider orientation="right" plain>Right Text</Divider>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur
+          </p>
+        </div>
+
+        <div>
+          <Divider orientation="left">sub-element align full</Divider>
+          <Row justify="space-around" style={{backgroundColor:"gray"}}>
+            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+          </Row>
+          
+          <Divider orientation="left" plain>Lets go</Divider>
+          <Row justify="space-around" style={{backgroundColor:"gray"}}>
+            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+          </Row>
+        </div>
+
       </>
     </div>
   )
