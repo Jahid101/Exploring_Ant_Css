@@ -153,7 +153,8 @@ export default function Home() {
               <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
                 {new Array(15).fill(null).map((_, index) => {
                   const key = index + 1;
-                  return <Menu.Item key={key}>{`Asim`}</Menu.Item>;
+                  const sense = ["", "Asim", "Bivor", "Tahnaz", "Shohel", "Symon", "Jahid noob","Asim", "Bivor", "Tahnaz", "Shohel", "Symon", "Jahid noob"]
+                  return <Menu.Item key={key}>{sense[key]}</Menu.Item>;
                 })}
               </Menu>
             </Header>
@@ -165,7 +166,7 @@ export default function Home() {
               </Breadcrumb>
               <div className="site-layout-content">Content</div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+            <Footer style={{ textAlign: 'center' }}>Ant Design ©2021 Created by Jahid noob</Footer>
           </Layout>
         </div>
 
