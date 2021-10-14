@@ -22,6 +22,9 @@ import {
   PlusCircleTwoTone,
   PlayCircleFilled
 } from '@ant-design/icons';
+import { Layout, Menu, Breadcrumb } from 'antd';
+
+const { Header, Content, Footer } = Layout;
 
 
 
@@ -126,21 +129,46 @@ export default function Home() {
 
         <div>
           <Divider orientation="left">sub-element align full</Divider>
-          <Row justify="space-around" style={{backgroundColor:"gray"}}>
-            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
-            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
-            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
-            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+          <Row justify="space-around" style={{ backgroundColor: "gray" }}>
+            <Col style={{ backgroundColor: "red" }} span={4}>col-4</Col>
+            <Col style={{ backgroundColor: "red" }} span={4}>col-4</Col>
+            <Col style={{ backgroundColor: "red" }} span={4}>col-4</Col>
+            <Col style={{ backgroundColor: "red" }} span={4}>col-4</Col>
           </Row>
-          
+
           <Divider orientation="left" plain>Lets go</Divider>
-          <Row justify="space-around" style={{backgroundColor:"gray"}}>
-            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
-            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
-            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
-            <Col style={{backgroundColor:"red"}} span={4}>col-4</Col>
+          <Row justify="space-around" style={{ backgroundColor: "gray" }}>
+            <Col style={{ backgroundColor: "red" }} span={4}>col-4</Col>
+            <Col style={{ backgroundColor: "red" }} span={4}>col-4</Col>
+            <Col style={{ backgroundColor: "red" }} span={4}>col-4</Col>
+            <Col style={{ backgroundColor: "red" }} span={4}>col-4</Col>
           </Row>
         </div>
+
+
+        <div>
+          <Layout className="layout">
+            <Header>
+              <div className="logo" />
+              <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+                {new Array(15).fill(null).map((_, index) => {
+                  const key = index + 1;
+                  return <Menu.Item key={key}>{`Asim`}</Menu.Item>;
+                })}
+              </Menu>
+            </Header>
+            <Content style={{ padding: '0 50px' }}>
+              <Breadcrumb style={{ margin: '16px 0' }}>
+                <Breadcrumb.Item>Asim Vai</Breadcrumb.Item>
+                <Breadcrumb.Item>Bivor Vai</Breadcrumb.Item>
+                <Breadcrumb.Item>Jahid</Breadcrumb.Item>
+              </Breadcrumb>
+              <div className="site-layout-content">Content</div>
+            </Content>
+            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+          </Layout>
+        </div>
+
 
       </>
     </div>
