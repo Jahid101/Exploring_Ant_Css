@@ -15,8 +15,8 @@ export default function Home() {
 
   const [size, setSize] = useState(8);
 
-  const router = useRouter()
-  const { page } = router.query
+  // const router = useRouter()
+  // const { page } = router.query
 
   const handleClick = (component) => {
     router.push(`/${component}`);
@@ -36,9 +36,10 @@ export default function Home() {
   return (
     <div className="ph-30 pv-30">
       <Layout className="layout">
+        <h1 className="text-center">Session: 01</h1>
         <Header>
           <div className="logo" />
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['0']}>
             {new Array(15).fill(null).map((_, index) => {
               const key = index + 1;
               const sense = ["", "button", "icon", "typography", "divider", "grid", "layout", "space", "affix", "breadcrumb", "dropdown", "menu", "pageHeader", "pagination", "steps"]
@@ -51,12 +52,28 @@ export default function Home() {
             })}
           </Menu>
         </Header>
+
+
+        <br />
+        <h1 className="text-center">Session: 02</h1>
+        <Header>
+          <div className="logo" />
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['0']}>
+            {new Array(15).fill(null).map((_, index) => {
+              const key = index + 1;
+              const sense = ["", "autoComplete", "cascader", "checkbox", "datepicker", "form", "input" ,"inputNumber","mention","radio","rate","select", "slider","switch","timePicker","transfer","treeSelect","upload"]
+              return <Menu.Item
+                onClick={() => handleClick(sense[key])}
+                key={key}
+              >
+                {sense[key]}
+              </Menu.Item>;
+            })}
+          </Menu>
+        </Header>
         <Content style={{ padding: '0 50px' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
-            <Breadcrumb.Item>{page}</Breadcrumb.Item>
-            {/* <Breadcrumb.Item>Asim Vai</Breadcrumb.Item>
-                <Breadcrumb.Item>Bivor Vai</Breadcrumb.Item>
-                <Breadcrumb.Item>Jahid</Breadcrumb.Item> */}
+            {/* <Breadcrumb.Item>{page}</Breadcrumb.Item> */}
           </Breadcrumb>
           <div className="site-layout-content">Exploring Ant Css</div>
         </Content>
