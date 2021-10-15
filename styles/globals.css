@@ -404,6 +404,9 @@ a {
 .underline{
   text-decoration: underline;
 }
+.text-center{
+  text-align: center;
+}
 
 .primary-color{
   color: #01574F !important;

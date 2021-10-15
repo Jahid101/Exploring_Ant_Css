@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import '../pages/Components/AntCss/custom.css';
+import 'antd/dist/antd.css'; 
 
 
 function MyApp({ Component, pageProps }) {
