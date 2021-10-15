@@ -1,6 +1,6 @@
 // import 'antd/dist/antd.css'; 
 import { Button, Col, Divider, Row, Space, Tooltip } from 'antd';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typography } from 'antd';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import Slider from '@ant-design/react-slick';
@@ -16,12 +16,20 @@ export default function Home() {
   const [size, setSize] = useState(8);
 
   const router = useRouter()
-
   const { page } = router.query
 
   const handleClick = (component) => {
     router.push(`/${component}`);
   }
+
+  // const [product, setProduct] = useState([]);
+
+  // useEffect(() => {
+  //   fetch(`https://app.firstbase.io/company/OR242941/rewards`)
+  //     .then(res => res.json())
+  //     .then(data => setProduct(data))
+  // }, [])
+  // console.log(product);
 
 
 

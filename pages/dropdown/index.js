@@ -21,29 +21,29 @@ const index = () => {
         </Menu.Item>
     </Menu>
 
-// overlay={menu}
 
 
+    // overlay={menu}
     return (
         <div>
             <h1 className="mv-50 mh-50">Dropdown</h1>
-            <Dropdown overlay={menu} placement="bottomLeft" arrow>
+            <Dropdown placement="bottomLeft" arrow>
                 <Button>bottomLeft</Button>
             </Dropdown>
-            <Dropdown overlay={menu} placement="bottomCenter" arrow>
+            <Dropdown placement="bottomCenter" arrow>
                 <Button>bottomCenter</Button>
             </Dropdown>
-            <Dropdown overlay={menu} placement="bottomRight" arrow>
+            <Dropdown placement="bottomRight" arrow>
                 <Button>bottomRight</Button>
             </Dropdown>
             <br />
-            <Dropdown overlay={menu} placement="topLeft" arrow>
+            <Dropdown placement="topLeft" arrow>
                 <Button>topLeft</Button>
             </Dropdown>
-            <Dropdown overlay={menu} placement="topCenter" arrow>
+            <Dropdown placement="topCenter" arrow>
                 <Button>topCenter</Button>
             </Dropdown>
-            <Dropdown overlay={menu} placement="topRight" arrow>
+            <Dropdown placement="topRight" arrow>
                 <Button>topRight</Button>
             </Dropdown>
         </div>
