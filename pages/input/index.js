@@ -7,22 +7,31 @@ const { TextArea } = Input;
 
 const Index = () => {
 
-    const [input, setInput] = useState()
+    const [input, setInput] = useState(null)
 
     const onChange = (value) => {
         console.log(value);
-        setInput(e.nativeEvent.data)
+        // setInput(value)
     };
+
 
 
     return (
         <div className="icons-list mv-50 mh-50">
             <h1 className="text-center underline">Hey there, Fill up those input fields</h1>
 
-            <Input placeholder="input with clear icon" allowClear onChange={onChange} />
+            <Input
+                placeholder="input with clear icon"
+                allowClear
+                onChange={onChange}
+            />
             <br />
             <br />
-            <TextArea placeholder="textarea with clear icon" allowClear onChange={onChange} />
+            <TextArea
+                placeholder="textarea with clear icon"
+                allowClear
+                onChange={onChange}
+            />
             {/* <p>{input}</p> */}
 
         </div>

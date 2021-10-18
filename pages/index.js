@@ -63,7 +63,7 @@ export default function Home() {
           <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['0']}>
             {new Array(15).fill(null).map((_, index) => {
               const key = index + 1;
-              const sense = ["", "autoComplete", "cascader", "checkbox", "datepicker", "form", "input", "inputNumber", "mention", "radio", "rate", "select", "slider", "switch", "timePicker", "transfer", "treeSelect", "upload"]
+              const sense = ["", "autoComplete", "cascader", "checkbox", "datepicker", "form", "input", "inputNumber", "mention", "radio", "rate", "select", "slider", "switch", "timePicker", "transfer"]
               return <Menu.Item
                 onClick={() => handleClick(sense[key])}
                 key={key}
