@@ -8,7 +8,7 @@ const options = [{ value: 'gold' }, { value: 'lime' }, { value: 'green' }, { val
 
 const Index = () => {
 
-    const [selected, setSelected] = useState(null)
+    const [selected, setSelected] = useState("")
 
     const tagRender = (props) => {
         const { label, value, closable, onClose } = props;
@@ -37,7 +37,7 @@ const Index = () => {
 
 
     return (
-        <div className="ph-30 pv-30">
+        <div className="mh-50 mv-50">
             <h1 className="text-center underline">This select options are awesome</h1>
 
             <Select
@@ -49,7 +49,8 @@ const Index = () => {
                 style={{ width: '100%' }}
                 options={options}
             />
-            <p>You have selected : {selected}</p>
+            <br />
+            <p>You have selected : {`${selected}`}</p>
         </div>
     );
 };

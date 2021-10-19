@@ -1,9 +1,13 @@
 import { Rate } from 'antd';
-import React from 'react';
+import React, { useState } from 'react';
 import { FrownOutlined, MehOutlined, SmileOutlined } from '@ant-design/icons';
 
 
-const index = () => {
+const Index = () => {
+
+    const [value, setValue] = useState(null)
+    const [value2, setValue2] = useState(null)
+    const [value3, setValue3] = useState(null)
 
     const customIcons = {
         1: <FrownOutlined />,
@@ -19,14 +23,25 @@ const index = () => {
         <div className="mh-50 mv-50">
             <h1 className="text-center underline">Rate us</h1>
 
-            <Rate allowHalf defaultValue={.5} />
+            <Rate allowHalf defaultValue={.5}
+                onChange={setValue}
+            />
+            <p>You have selected : {value}</p>
+
             <>
-                <Rate defaultValue={2} character={({ index }) => index + 1} />
                 <br />
-                <Rate defaultValue={3} character={({ index }) => customIcons[index + 1]} />
+                <Rate defaultValue={2} character={({ index }) => index + 1}
+                    onChange={setValue2}
+                />
+                <p>You have selected : {value2}</p>
+
+                <br />
+                <Rate defaultValue={3} character={({ index }) => customIcons[index + 1]}
+                    onChange={setValue3} />
+                <p>You have selected : {value3}</p>
             </>
         </div>
     );
 };
 
-export default index;
+export default Index;
