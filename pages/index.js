@@ -111,6 +111,24 @@ export default function Home() {
             })}
           </Menu>
         </Header>
+
+
+        <br />
+        <Header>
+          <div className="logo" />
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['0']}>
+            {new Array(15).fill(null).map((_, index) => {
+              const key = index + 1;
+              const sense = ["", "anchor", "backTop", "configProvider"]
+              return <Menu.Item
+                onClick={() => handleClick(sense[key])}
+                key={key}
+              >
+                {sense[key]}
+              </Menu.Item>;
+            })}
+          </Menu>
+        </Header>
         {/* <Content style={{ padding: '0 50px' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>{page}</Breadcrumb.Item>
