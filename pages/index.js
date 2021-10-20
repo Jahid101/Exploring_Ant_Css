@@ -5,6 +5,7 @@ import { Typography } from 'antd';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import Slider from '@ant-design/react-slick';
 import { useRouter } from 'next/dist/client/router';
+import CollapseTask from '../components/CollapseTask/CollapseTask';
 
 const { Header, Content } = Layout;
 
@@ -129,6 +130,10 @@ export default function Home() {
             })}
           </Menu>
         </Header>
+
+
+        <CollapseTask />
+
         {/* <Content style={{ padding: '0 50px' }}>
           <Breadcrumb style={{ margin: '16px 0' }}>
             <Breadcrumb.Item>{page}</Breadcrumb.Item>
